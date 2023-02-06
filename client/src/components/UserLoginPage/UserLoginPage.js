@@ -1,9 +1,10 @@
 import React from "react";
 import UserLoginBody from "./UserLoginBody/UserLoginBody";
-import UserLoginNav from "./UserLoginNav/UserLoginNav";
+import "./UserLoginPage.css";
+
 const UserLoginPage = () => {
   return (
-    <div>
+    <div className="user-login-page">
       <UserLoginBody />
     </div>
   );
