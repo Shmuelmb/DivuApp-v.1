@@ -1,0 +1,6 @@
+.clock {
+    display: flex;
+    justify-content: center;
+    color: #678983;
+    font-style: unset;    
+}
