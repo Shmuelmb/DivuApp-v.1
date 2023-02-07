@@ -1,9 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const myReports = () => {
+
+const MyReports = () => {
   return (
-    <div>myReports</div>
+    <div>
+      
+    <h1>my reports</h1>
+    <Link to="/MyReports">My Reports </Link>
+
+    </div>
   )
 }
 
-export default myReports
+export default MyReports
