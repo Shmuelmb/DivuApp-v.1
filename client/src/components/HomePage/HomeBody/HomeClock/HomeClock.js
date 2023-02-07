@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import './Clock.css';
+import "./HomeClock.css";
 
-
-const Clock = () => {
+const HomeClock = () => {
   const [clock, setClock] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
@@ -14,7 +13,7 @@ const Clock = () => {
     return () => clearInterval(id);
   }, []);
 
-  return <h1 className="clock">{clock}</h1>;
+  return <h1 className="clock"> Time is : {clock}</h1>;
 };
 
-export default Clock;
+export default HomeClock;

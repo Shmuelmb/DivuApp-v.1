@@ -1,25 +1,21 @@
 import React from "react";
-import HomePageBody from "../HomePageBody/HomePageBody";
-import HomePageNav from "../HomePageNav/HomePageNav";
-import Clock from "../Clock/Clock.js";
-import StartShift from "../HomePageButtons/StartShift.js"
-import EndShift from "../HomePageButtons/EndShift";
+import HomeBody from "./HomeBody/HomeBody";
+import HomeNav from "./HomeNav/HomeNav";
+import Clock from "./HomeBody/HomeClock/HomeClock.js";
+import StartShift from "./HomeBody/StartShift/StartShift.js";
+import EndShift from "./HomeBody/EndShift/EndShift";
+import { Link } from "react-router-dom";
 
-import './HomePage.css';
+import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <div className="homePage">
-            <HomePageBody />
+    <div className="home-page">
+      <HomeNav />
 
-      <HomePageNav />
-      <Clock />
-    <StartShift />
-    <EndShift />
-    
-
+      <HomeBody />
     </div>
   );
 };
 
-export default HomePage;  
+export default HomePage;
