@@ -5,9 +5,11 @@ import Footer from "./components/UserLoginPage/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<UserLoginPage />} />
-      </Routes>
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<UserLoginPage />} />
+        </Routes>
+      </div>
       <Footer />
     </BrowserRouter>
   );
