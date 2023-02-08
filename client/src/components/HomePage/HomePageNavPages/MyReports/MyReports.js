@@ -3,7 +3,7 @@ import "./MyReports.css";
 const MyReports = () => {
   return (
     <div className="my-reports">
-      <h1>my reports</h1>
+      <h1>gg</h1>
     </div>
   );
 };

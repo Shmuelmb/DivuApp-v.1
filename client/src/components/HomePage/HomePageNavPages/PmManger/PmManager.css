@@ -1,0 +1,16 @@
+.pm-manager {
+align-items: center;
+display: flex;
+padding: 50px;
+flex-direction: column;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pm-manager button {
+    margin: 20px;
+}
