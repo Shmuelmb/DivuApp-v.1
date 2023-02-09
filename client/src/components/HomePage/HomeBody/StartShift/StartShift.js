@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./StartShift.css";
 
 //HOOK Always on top of component
-const StartShift = () => {
+const StartShift = (time) => {
   const [startShift, setStartShift] = useState("");
 
   // use state is condition for true fase

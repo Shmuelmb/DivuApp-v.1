@@ -15,7 +15,7 @@ const PmManger = () => {
     </div>
     <div className="form-group">
         <label>Message</label>
-        <textarea className="form-control" rows="10"></textarea>
+        <textarea className="form-control" rows="20"></textarea>
     </div>
     <button type="submit">Submit Request</button>
 {/* </form> */}
