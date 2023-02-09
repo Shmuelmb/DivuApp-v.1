@@ -3,15 +3,18 @@ import "./EndShift.css";
 
 const EndShift = () => {
   const [endShift, setEndShift] = useState("");
+  const [disable, setDisable] = useState(false);
 
   function giveEndShift() {
     setEndShift(new Date().toLocaleTimeString());
+    console.log(endShift)
+    setDisable(true)
   }
 
   //js logic
   return (
     <div className="end-shift">
-      <button onClick={giveEndShift}>סיים משמרת</button>
+      <button disabled={disable} onClick={giveEndShift}>סיים משמרת</button>
       <p>End time :{endShift}</p>
     </div>
   );
