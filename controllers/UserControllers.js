@@ -56,10 +56,10 @@ export const getOneUserController = async (req, res) => {
   }
 };
 
-export const updateTodoController = async (req, res) => {
+export const updateUserController = async (req, res) => {
   const updates = Object.keys(req.body);
   const isValidOperation = updates.every((update) =>
-    todosAllowedUpdates.includes(update)
+    uesrsAllowedUpdates.includes(update)
   );
 
   if (!isValidOperation) {
@@ -68,13 +68,13 @@ export const updateTodoController = async (req, res) => {
 
   try {
     const { id } = req.params;
-    const todo = await getOneTodo(id);
-    if (!todo) {
-      res.status(404).send({ message: "todo does not exist" });
+    const user = await getOneUser(id);
+    if (!user) {
+      res.status(404).send({ message: "user does not exist" });
     }
-    updates.forEach((update) => (todo[update] = req.body[update]));
-    await todo.save();
-    res.status(200).send(todo);
+    updates.forEach((update) => (user[update] = req.body[update]));
+    await user.save();
+    res.status(200).send(user);
   } catch (e) {
     console.log(e);
     res.status(500).send({ message: e });

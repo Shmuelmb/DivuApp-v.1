@@ -6,8 +6,9 @@ import dotenv from "dotenv";
 import {
   getAllUsersController,
   addUserController,
-  updateTodoController,
+  updateUserController,
   deleteUserController,
+  getOneUserController,
 } from "./controllers/UserControllers.js";
 dotenv.config();
 
@@ -24,9 +25,10 @@ app.use(cors());
 mongoose.set("strictQuery", true);
 
 //routes for users
-app.get("/api/getAllUsers", getAllUsersController);
+app.get("/api/users/getAllUsers", getAllUsersController);
+app.get("/api/users/getOneUser/:id", getOneUserController);
 app.post("/api/users/addUser", addUserController);
-app.put("/api/users/updateUser/:id", updateTodoController);
+app.put("/api/users/updateUser/:id", updateUserController);
 app.delete("/api/users/deleteUser/:id", deleteUserController);
 
 mongoose.connect(
