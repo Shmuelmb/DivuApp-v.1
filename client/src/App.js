@@ -6,7 +6,6 @@ import PmManger from "./components/HomePage/HomePageNavPages/PmManger/PmManger";
 import EndShift from "./components/HomePage/HomeBody/EndShift/EndShift";
 import StartShift from "./components/HomePage/HomeBody/StartShift/StartShift";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import UserLoginPage from "./components/UserLoginPage/UserLoginPage";
 import Footer from "./components/UserLoginPage/Footer/Footer";
 

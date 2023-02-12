@@ -19,10 +19,9 @@ export const getAllUsersController = async (req, res) => {
 
 export const addUserController = async (req, res) => {
   try {
-    const userFullName = req.body.FullName;
-    const userAccessID = req.body.AccessID;
+    const user = req.body;
 
-    const newUser = await addUser(userFullName, userAccessID);
+    const newUser = await addUser({ ...user });
     res.status(200).send(newUser);
   } catch (e) {
     console.log(e);
