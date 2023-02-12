@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./UserLoginBody.css";
 import { useNavigate } from "react-router-dom";
+import MyContext from "../../../MyContext";
+import { useContext } from "react";
+
 const UserLoginBody = () => {
   const navigate = useNavigate();
   const [passFiveDigitsError, setPassFiveDigitsError] = useState("");
   const [userList, setUserList] = useState([]);
   const [passInput, setPassInput] = useState();
-  const [userInput, setUserInput] = useState();
+  const { userInput, setUserInput } = useContext(MyContext);
 
   const loginCheck = (username, pass) =>
     userList.map((user) => {

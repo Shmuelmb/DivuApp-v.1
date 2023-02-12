@@ -1,10 +1,13 @@
 import React from "react";
 import "./PmManager.css";
+import { useState } from "react";
 
 const PmManger = () => {
   function printMessage() {
     console.log();
   }
+  const [postContent, setPostContent] = useState(""); // Declare a state variable...
+  console.log(postContent);
 
   return (
     <div className="pm-manager">
@@ -21,12 +24,14 @@ const PmManger = () => {
       <div className="form-group">
         <label>Message</label>
         <textarea
-          placeholder="Enter Message"
-          className="form-control"
-          rows="20"
+          onChange={(e) => setPostContent(e.target.value)}
+          placeholder="Please enter message"
+          value={postContent}
+          rows={20}
         ></textarea>
       </div>
-      <button onClick={printMessage} type="submit">
+
+      <button onClick={(e) => setPostContent(e.target.value)} type="submit">
         Submit Request
       </button>
       {/* </form> */}
