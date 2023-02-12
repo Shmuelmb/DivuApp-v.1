@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./UserLoginBody.css";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Loading/Loading";
 const UserLoginBody = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [userList, setUserList] = useState([]);
   const [passInput, setPassInput] = useState();
   const [userInput, setUserInput] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const loginCheck = (username, pass) =>
     userList.map((user) => {
@@ -33,6 +35,8 @@ const UserLoginBody = () => {
       setUserList(data);
     } catch (e) {
       console.log(e);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -40,11 +44,10 @@ const UserLoginBody = () => {
     getAllUsers();
   }, []);
 
-  return (
+  return !isLoading ? (
     <div className="user-login-body">
-      <h1>DivuApp</h1>
       <h3>Welcome to DivuApp</h3>
-      <div className="input-id-field">
+      <div className="input-field">
         <input
           onChange={(e) => {
             setUserInput(e.target.value);
@@ -77,10 +80,9 @@ const UserLoginBody = () => {
         className="button-6">
         Login
       </button>
-      <p className="admin-btn" onClick={() => navigate("/adminpage")}>
-        Login as administrator
-      </p>
     </div>
+  ) : (
+    <Loading />
   );
 };
 
