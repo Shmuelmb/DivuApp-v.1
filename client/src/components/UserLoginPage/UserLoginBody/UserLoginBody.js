@@ -18,9 +18,10 @@ const UserLoginBody = () => {
       }
     });
 
-  const isPassBiggerThenFive = (pass) =>
+  const isPassBiggerThenFive = (pass) => {
     pass.length < 5 &&
-    setError("The Password must contain at least five digits");
+      setError("The Password must contain at least five digits");
+  };
 
   const getAllUsers = async () => {
     try {
@@ -72,7 +73,8 @@ const UserLoginBody = () => {
         onClick={() => {
           loginCheck(userInput, passInput);
         }}
-        className="button-6">
+        className="button-6"
+      >
         Login
       </button>
       <p className="admin-btn" onClick={() => navigate("/adminpage")}>
