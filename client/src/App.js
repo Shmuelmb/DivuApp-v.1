@@ -16,10 +16,10 @@ function App() {
       <div className="main">
         <Routes>
           <Route path="/" element={<UserLoginPage />} />
-          <Route path="/homepage:id" element={<Footer />} />
-          <Route path="/myreports" element={<MyReports />}></Route>
-          <Route path="/logout" element={<LogOut />}></Route>
-          <Route path="/pmmanager" element={<PmManger />}></Route>
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/myreports" element={<MyReports />} />
+          <Route path="/logout" element={<LogOut />} />
+          <Route path="/pmmanager" element={<PmManger />} />
         </Routes>
       </div>
     </BrowserRouter>
