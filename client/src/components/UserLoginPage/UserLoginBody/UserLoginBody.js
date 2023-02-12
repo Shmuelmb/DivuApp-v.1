@@ -7,18 +7,20 @@ const UserLoginBody = () => {
   const [userList, setUserList] = useState([]);
   const [passInput, setPassInput] = useState();
   const [userInput, setUserInput] = useState();
+  const [error, setError] = useState(false);
 
   const loginCheck = (username, pass) =>
     userList.map((user) => {
       if (user.Password === Number(pass) && user.UserName === username) {
         navigate(`/homepage:${pass}`);
       } else {
-        return false;
+        setError("Falied, please try agein");
       }
     });
 
   const isPassBiggerThenFive = (pass) =>
-    pass.length < 5 ? setPassFiveDigits(false) : setPassFiveDigits(true);
+    pass.length < 5 &&
+    setError("The Password must contain at least five digits");
 
   const getAllUsers = async () => {
     try {
@@ -56,10 +58,10 @@ const UserLoginBody = () => {
           type="number"
           placeholder="Please enter your Password"
         />
-        <p className={!passFiveDigits ? "helper-text-input" : "hidden"}>
+        {/* <p className={!passFiveDigits ? "helper-text-input" : "hidden"}>
           The Password must contain at least five digits
-        </p>
-        <p className="hidden">Falied, please try agein</p>
+        </p> */}
+        {error && <p>{error}</p>}
       </div>
       <div className="remember-me-checkbox">
         <input className="checkbox" type="checkbox" />
@@ -70,8 +72,7 @@ const UserLoginBody = () => {
         onClick={() => {
           loginCheck(userInput, passInput);
         }}
-        className="button-6"
-        disabled={passFiveDigits ? false : true}>
+        className="button-6">
         Login
       </button>
       <p className="admin-btn" onClick={() => navigate("/adminpage")}>
