@@ -2,11 +2,12 @@ import React from "react";
 import "./Loading.css";
 const Loading = () => {
   return (
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div className="loading">
+      <div className="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };
