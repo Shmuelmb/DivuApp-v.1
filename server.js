@@ -1,9 +1,9 @@
 import express from "express"; // bring from node modules the server
 import cors from "cors";
-import { dummyTools } from "./data/data.js";
+// import { dummyTools } from "./data/data.js";
 import mongoose from "mongoose";
-import { todosAllowedUpdates } from "./data/data.js";
-import { allProductsFromData } from "./data/data.js";
+// import { todosAllowedUpdates } from "./data/data.js";
+// import { allProductsFromData } from "./data/data.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -243,7 +243,7 @@ mongoose.connect(
   (info) => {
     app.listen(PORT, () => {
       console.log("info", info);
-      console.log("i am listening");
+      console.log("i am listening !!!!!!!!!!!!!!!!!");
     });
   }
 );
