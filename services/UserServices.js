@@ -4,8 +4,8 @@ export const getAllUsers = () => {
   return UserModel.find({});
 };
 
-export const addUser = (userFullName, ID) => {
-  const newUser = new UserModel({ FullName: userFullName, AccessID: ID });
+export const addUser = (userObj) => {
+  const newUser = new UserModel({ ...userObj });
   return newUser.save();
 };
 

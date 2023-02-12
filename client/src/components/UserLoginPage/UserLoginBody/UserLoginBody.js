@@ -3,24 +3,22 @@ import "./UserLoginBody.css";
 import { useNavigate } from "react-router-dom";
 const UserLoginBody = () => {
   const navigate = useNavigate();
-  const [passFiveDigits, setPassFiveDigits] = useState(false);
+  const [passFiveDigitsError, setPassFiveDigitsError] = useState("");
   const [userList, setUserList] = useState([]);
   const [passInput, setPassInput] = useState();
   const [userInput, setUserInput] = useState();
-  const [error, setError] = useState(false);
 
   const loginCheck = (username, pass) =>
     userList.map((user) => {
       if (user.Password === Number(pass) && user.UserName === username) {
         navigate(`/homepage:${pass}`);
-      } else {
-        setError("Falied, please try agein");
       }
     });
 
   const isPassBiggerThenFive = (pass) =>
-    pass.length < 5 &&
-    setError("The Password must contain at least five digits");
+    pass.length < 5
+      ? setPassFiveDigitsError("The Password must contain at least five digits")
+      : setPassFiveDigitsError("");
 
   const getAllUsers = async () => {
     try {
@@ -61,7 +59,7 @@ const UserLoginBody = () => {
         {/* <p className={!passFiveDigits ? "helper-text-input" : "hidden"}>
           The Password must contain at least five digits
         </p> */}
-        {error && <p>{error}</p>}
+        {passFiveDigitsError && <p>{passFiveDigitsError}</p>}
       </div>
       <div className="remember-me-checkbox">
         <input className="checkbox" type="checkbox" />
