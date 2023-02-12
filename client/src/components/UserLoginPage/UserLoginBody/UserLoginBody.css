@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin: auto;
 
 }
 
@@ -20,7 +21,7 @@
 .input-id-field > input{
     padding-bottom: 3%;
     padding-top: 3%;
-    width: 100%;
+    width: 90%;
     border-end-end-radius: 100px;
     border-top-right-radius: 100px;
 

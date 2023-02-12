@@ -8,9 +8,9 @@ function App() {
       <div className="main">
         <Routes>
           <Route path="/" element={<UserLoginPage />} />
+          <Route path="/homepage:id" element={<Footer />} />
         </Routes>
       </div>
-      <Footer />
     </BrowserRouter>
   );
 }

@@ -13,8 +13,16 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
-  AccessID: {
+  UserName: {
+    type: String,
+    required: true,
+  },
+  Password: {
     type: Number,
+    required: true,
+  },
+  Email: {
+    type: String,
     required: true,
   },
 });

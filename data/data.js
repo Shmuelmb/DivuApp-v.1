@@ -1,1 +1,7 @@
-export const uesrsAllowedUpdates = ["FullName", "isAdmin", "AccessID"];
+export const uesrsAllowedUpdates = [
+  "FullName",
+  "isAdmin",
+  "Password",
+  "UseName",
+  "Email",
+];
