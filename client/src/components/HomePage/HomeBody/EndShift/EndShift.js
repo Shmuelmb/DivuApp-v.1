@@ -12,12 +12,11 @@ const EndShift = () => {
 
   function giveEndShift() {
     setEndShift(new Date().toLocaleTimeString());
-    const object = {
+    const workerEndShift = {
       ID: "ID HERE",
-      StartShift: { endShift, date },
+      EndShift: { endShift, date },
     };
-    console.log(object);
-    setDisable(true);
+    console.log(workerEndShift);
   }
 
   //js logic
