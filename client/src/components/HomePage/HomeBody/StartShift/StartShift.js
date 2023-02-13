@@ -43,8 +43,8 @@ const StartShift = (isClicked) => {
       </div>
 
       <div className="end-shift">
-        <button onClick={giveEndShift}>סיים משמרת</button>
-        <p>End time :{endShift}</p>
+        <button  onClick={giveEndShift}>סיים משמרת</button>
+        <p>End time : {endShift}</p>
       </div>
     </div>
   );

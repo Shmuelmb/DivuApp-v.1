@@ -8,7 +8,6 @@ import {useState, useEffect} from 'react'
 
 
 const HomeNav = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const { userInput, setUserInput } = useContext(MyContext);
   console.log(userInput);
@@ -18,43 +17,46 @@ const HomeNav = () => {
   const navigate = useNavigate();
 
 
-  const toggleNav = () => {
-    let menu = "";
-
-  if (!toggleMenu) {
-    setToggleMenu(true);
-    menu = "open";
-    console.log(menu)
-  } else {
-    setToggleMenu(false);
-    menu = "close"
-    console.log(menu)
-
-  }
-  }
   
 
   return (
-
-
-
-   <div className="home-nav">
-             <p>welcome back {userInput}</p>
-             <nav>
-             {(!toggleMenu && screenWidth > 500) && (
-     <ul className="nav-page-list">
-
-     <li className="nav-page" onClick={() => navigate("/MyReports")}>My Reports</li>
-     <li className="nav-page" onClick={() => navigate("/PmManager")}>PM Manager</li>
-     <li className="nav-page" onClick={() => navigate("/LogOut")}>Log Out</li>
-     
-     </ul>
-      )}
     
-      <button onClick={toggleNav} className="btn">OPEN MENU</button>
+<div class="navbar">
+  <p>welcome back {userInput}</p>
 
-    </nav>
+
+<a className="nav-page" onClick={() => navigate("/*")}>NEW PAGE</a>
+<a className="nav-page" onClick={() => navigate("/*")}>NEW PAGE</a>
+  <div class="dropdown">
+    <button class="dropbtn">My Profile 
+    </button>
+    <div class="dropdown-content">
+    <a className="nav-page" onClick={() => navigate("/MyReports")}>My Reports</a>
+    <a className="nav-page" onClick={() => navigate("/PmManager")}>PM Manager</a>
+    <a className="nav-page" onClick={() => navigate("/LogOut")}>Log Out</a>
     </div>
+  </div> 
+</div>
+
+  //  <div className="home-nav">
+  //            <p>welcome back {userInput}</p>
+  //            <nav>
+  //            {(!toggleMenu && screenWidth > 500) && (
+  //    <ul className="nav-page-list">
+
+  //    <li className="nav-page" onClick={() => navigate("/MyReports")}>My Reports</li>
+  //    <li className="nav-page" onClick={() => navigate("/PmManager")}>PM Manager</li>
+  //    <li className="nav-page" onClick={() => navigate("/LogOut")}>Log Out</li>
+     
+  //    </ul>
+  //     )}
+    
+  //     <button onClick={toggleNav} className="btn">OPEN MENU</button>
+
+  //   </nav>
+  //   </div>
+
+    
   );
 };
 
