@@ -5,11 +5,27 @@
 }
 
 .start-shift button{
-    margin: 0 15px;
-    font-size: 0.9rem;
+    color: #E6DDC4;
+    background-color: #181D31;
+    align-items: center;
+    border: 1px solid #E6DDC4;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
     transition: all 250ms;
-    cursor:pointer;
-    border-radius: 12px;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
 
 }
 
@@ -20,11 +36,27 @@
 }
 
 .end-shift button{
-    margin: 0 15px;
-    font-size: 0.9rem;
+    color: #E6DDC4;
+    background-color: #181D31;
+    align-items: center;
+    border: 1px solid #E6DDC4;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
     transition: all 250ms;
-    cursor:pointer;
-    border-radius: 12px;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
     
 }
 .start-shift:hover {
