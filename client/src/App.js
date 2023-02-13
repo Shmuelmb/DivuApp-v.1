@@ -22,11 +22,20 @@ function App() {
             <Route path="/myreports" element={<MyReports />} />
             <Route path="/logout" element={<LogOut />} />
             <Route path="/pmmanager" element={<PmManger />} />
+            <Route path="*" element={<NotFound />} />
+
           </Routes>
         </div>
       </MyContext.Provider>
     </BrowserRouter>
+
+    
   );
+  
+}
+
+export const NotFound = () => {
+  return <div><h1> 404 page not found </h1> </div>
 }
 
 export default App;

@@ -7,6 +7,8 @@ const HomeDate = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`;
 
+
+
   const dayOfWeekDigit = new Date().getDay();
   const dayOfWeekName = new Date().toLocaleString("default", {
     weekday: "long",

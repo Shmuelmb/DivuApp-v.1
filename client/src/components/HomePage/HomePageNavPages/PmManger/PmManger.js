@@ -1,20 +1,39 @@
 import React from "react";
 import "./PmManager.css";
 import { useState } from "react";
+import MyContext from "../../../../MyContext";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PmManger = () => {
-  function printMessage() {
-    console.log();
-  }
-  const [postContent, setPostContent] = useState(""); // Declare a state variable...
-  console.log(postContent);
+   const [postContent, setPostContent] = useState(""); // Declare a state variable...
+   const [isEmptyContent, setisEmptyContent] = useState("");
+
+   const { userInput, setUserInput } = useContext(MyContext);
+  const navigate = useNavigate()
+   
+
+  function sendPmMessage(e) {
+    if(postContent){
+      setPostContent(e.target.value)
+      console.log(postContent)
+    }
+       else {
+      alert('Please enter text')
+    }
+    
+    };
+  
+
 
   return (
     <div className="pm-manager">
-      <h2>Send Private Message To Manager</h2>
+            <button onClick={() => navigate(-1)}>Go back</button>
+
+      <h1>Send Private Message To Manager</h1>
       {/* <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST"> */}
       <div className="form-group">
-        <label>Worker Name</label>
+        <label>Worker Name {userInput}</label>
         <input type="text" className="form-control" share />
       </div>
       <div className="form-group">
@@ -31,7 +50,7 @@ const PmManger = () => {
         ></textarea>
       </div>
 
-      <button onClick={(e) => setPostContent(e.target.value)} type="submit">
+      <button onClick={sendPmMessage} type="submit">
         Submit Request
       </button>
       {/* </form> */}
