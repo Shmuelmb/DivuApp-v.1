@@ -10,6 +10,7 @@ import {
   deleteUserController,
   getOneUserController,
 } from "./controllers/UserControllers.js";
+
 dotenv.config();
 
 const { PORT, DB_USER, DB_PASS, DB_HOST, DB_NAME } = process.env;

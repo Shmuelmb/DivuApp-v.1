@@ -47,7 +47,7 @@ const UserLoginBody = () => {
 
   return !isLoading ? (
     <div className="user-login-body">
-      <h3>Welcome to DivuApp</h3>
+      <h3>WELCOME TO DIVUAPP</h3>
       <div className="input-field">
         <input
           onChange={(e) => {
