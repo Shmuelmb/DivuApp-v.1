@@ -8,22 +8,26 @@ import { useNavigate } from "react-router-dom";
 const PmManger = () => {
    const [postContent, setPostContent] = useState(""); // Declare a state variable...
    const [isEmptyContent, setisEmptyContent] = useState("");
+   
 
    const { userInput, setUserInput } = useContext(MyContext);
   const navigate = useNavigate()
    
 
   function sendPmMessage(e) {
-    if(postContent){
+    if(postContent.length > 5){
       setPostContent(e.target.value)
       console.log(postContent)
     }
        else {
-      alert('Please enter text')
+        setisEmptyContent('Please enter at least 5 words')
     }
     
+    
     };
-  
+
+
+
 
 
   return (
@@ -49,6 +53,7 @@ const PmManger = () => {
           rows={20}
         ></textarea>
       </div>
+       <p>{isEmptyContent}</p>
 
       <button onClick={sendPmMessage} type="submit">
         Submit Request
