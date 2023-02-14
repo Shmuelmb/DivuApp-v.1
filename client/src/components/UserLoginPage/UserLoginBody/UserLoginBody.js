@@ -47,10 +47,11 @@ const UserLoginBody = () => {
         <input
           onChange={(e) => {
             setUserInput(e.target.value);
+            console.log(userInput)
           }}
           type="text"
           placeholder="Please enter your User name"
-        />
+                  />
         <input
           onChange={(e) => {
             isPassBiggerThenFive(e.target.value);
