@@ -5,3 +5,13 @@ export const uesrsAllowedUpdates = [
   "UseName",
   "Email",
 ];
+
+
+export const ReportsAllowedUpdates = [
+  "UseName",
+  "isAdmin",
+  "startShift",
+  "endShift",
+  
+];
+

@@ -31,6 +31,10 @@ app.post("/api/users/addUser", addUserController);
 app.put("/api/users/updateUser/:id", updateUserController);
 app.delete("/api/users/deleteUser/:id", deleteUserController);
 
+//routes for Reports
+app.post("/api/reports/addReport", addUserController);
+
+
 mongoose.connect(
   `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`,
   {
