@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./StartShift.css";
 
 //HOOK Always on top of component
-const StartShift = (isClicked) => {
+const StartShift = () => {
   const [startShift, setStartShift] = useState("");
   const [endShift, setEndShift] = useState("");
+  const [startShiftClicked, setstartShiftClicked] = useState(true);
 
-  const [workerStartShift, setworkerStartShift] = useState("");
+
+
 
   const current = new Date();
   const date = `${current.getDate()}/${
@@ -17,6 +19,8 @@ const StartShift = (isClicked) => {
 
   function giveStartShift() {
     setStartShift(new Date().toLocaleTimeString());
+    setstartShiftClicked(false)
+    console.log(startShiftClicked)
     const workerStartShift = {
       ID: "ID HERE",
       StartShift: { startShift, date },
@@ -43,8 +47,10 @@ const StartShift = (isClicked) => {
       </div>
 
       <div className="end-shift">
-        <button  onClick={giveEndShift}>סיים משמרת</button>
+        <button disabled={startShiftClicked} onClick={giveEndShift}>סיים משמרת</button>
         <p>End time : {endShift}</p>
+        
+       
       </div>
     </div>
   );

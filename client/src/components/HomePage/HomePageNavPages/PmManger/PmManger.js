@@ -32,6 +32,7 @@ const PmManger = () => {
 
   return (
     <div className="pm-manager">
+      <div className="pm-manager-container">
             <button onClick={() => navigate(-1)}>Go back</button>
 
       <h1>Send Private Message To Manager</h1>
@@ -59,6 +60,7 @@ const PmManger = () => {
         Submit Request
       </button>
       {/* </form> */}
+    </div>
     </div>
   );
 };

@@ -6,11 +6,21 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #181D31;
 }
 
 .form-group{
     display: flex;
     flex-direction: column;
+}
+
+.pm-manager-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #678983;
+    border-radius: 10px;
 }
 
 

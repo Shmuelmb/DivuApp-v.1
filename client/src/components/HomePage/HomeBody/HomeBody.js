@@ -8,6 +8,7 @@ import Footer from "../../UserLoginPage/Footer/Footer";
 const HomeBody = () => {
   return (
     <div className="home-body">
+      
       <HomeDate />
       <Clock />
       <StartShift />
