@@ -8,6 +8,14 @@
     border-radius: 10px;
     align-items: center;
   }
+
+  .navbar p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+ 
+  }
   
   .navbar a {
     display: flex;

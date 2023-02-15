@@ -17,6 +17,8 @@ const PmManger = () => {
   function sendPmMessage(e) {
     if(postContent.length > 5){
       setPostContent(e.target.value)
+      setisEmptyContent('')
+
       console.log(postContent)
     }
        else {
@@ -48,7 +50,9 @@ const PmManger = () => {
       <div className="form-group">
         <label>Message</label>
         <textarea
-          onChange={(e) => setPostContent(e.target.value)}
+            onChange={(e) => {
+            setPostContent(e.target.value);
+          }}
           placeholder="Please enter message"
           value={postContent}
           rows={20}

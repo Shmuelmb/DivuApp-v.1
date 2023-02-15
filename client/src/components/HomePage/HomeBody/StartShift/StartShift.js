@@ -6,6 +6,7 @@ const StartShift = () => {
   const [startShift, setStartShift] = useState("");
   const [endShift, setEndShift] = useState("");
   const [startShiftClicked, setstartShiftClicked] = useState(true);
+  const [formatShifts, setformatShifts] = useState("");
 
 
 
@@ -37,6 +38,27 @@ const StartShift = () => {
     console.log(workerEndShift);
   }
 
+  function giveEndShift() {
+    setEndShift(new Date().toLocaleTimeString());
+    const workerEndShift = {
+      ID: "ID HERE",
+      EndShift: { endShift, date },
+    };
+    console.log(workerEndShift);
+  }
+
+  function formatShiftsTimes() {
+    setEndShift();
+    setStartShift()
+    console.log(endShift)
+    console.log(startShift)
+
+  
+  }
+
+
+
+
   //js logic
   return (
     <div className="worker-shifts">
@@ -50,7 +72,7 @@ const StartShift = () => {
         <button disabled={startShiftClicked} onClick={giveEndShift}>סיים משמרת</button>
         <p>End time : {endShift}</p>
         
-       
+       <button onClick={formatShiftsTimes}>אפס שעון יומי</button>
       </div>
     </div>
   );

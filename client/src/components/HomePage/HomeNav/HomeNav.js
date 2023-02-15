@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import MyContext from "../../../MyContext";
 import { useContext } from "react";
 import {useState, useEffect} from 'react'
+import { Avatar } from "@mui/material";
 
 
 
@@ -22,8 +23,10 @@ const HomeNav = () => {
   return (
     
 <div class="navbar">
-  <p>welcome back {userInput}</p>
-
+<p><Avatar>H</Avatar></p>
+  <p>
+ welcome back {userInput}</p>
+ 
 
 <a className="nav-page" onClick={() => navigate("/*")}>NEW PAGE</a>
 <a className="nav-page" onClick={() => navigate("/*")}>NEW PAGE</a>
@@ -34,6 +37,7 @@ const HomeNav = () => {
     <a className="nav-page" onClick={() => navigate("/MyReports")}>My Reports</a>
     <a className="nav-page" onClick={() => navigate("/PmManager")}>PM Manager</a>
     <a className="nav-page" onClick={() => navigate("/LogOut")}>Log Out</a>
+    
     </div>
   </div> 
 </div>
